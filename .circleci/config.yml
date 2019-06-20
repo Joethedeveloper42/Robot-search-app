@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run: echo "Double build this is another"
-  workflows:
-    version: 2
-    barry_from_eastenders:
-      jobs:
-        - first_build
-        - bro_build
+workflows:
+  version: 2
+  barry_from_eastenders:
+    jobs:
+      - first_build
+      - bro_build
