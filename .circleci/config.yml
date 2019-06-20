@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  first_build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "Yeah boi"
+  bro_build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "Double build this is another"
+  workflows:
+    version: 2
+    barry_from_eastenders:
+      jobs:
+        - first_build
+        - bro_build
